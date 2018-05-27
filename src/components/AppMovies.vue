@@ -85,10 +85,12 @@
 
 <script>
 import MoviesService from "./../services/MoviesService";
+
 import MovieRow from "./MovieRow.vue";
 import MovieSearch from "./MovieSearch.vue";
 import MovieForm from "./MovieForm.vue";
 import MoviesPaginator from "./MoviesPaginator.vue";
+
 
 import { mapGetters, mapMutations, mapActions } from "vuex";
 
@@ -114,7 +116,8 @@ export default {
     ...mapGetters({
       magicNumber: "getCounter",
       currentTerm: "getSearchTerm",
-      movies: "getMovies"
+      movies: "getMovies",
+     
     }),
     selectedMoviesCounter() {
       return this.selectedMoviesIds.length;
@@ -143,6 +146,7 @@ export default {
     storeMovie() {
       MoviesService.store(this.movieForm);
     },
+
     onSearchTermChanged(term) {
       this.currentTerm = term;
       // MoviesService.index(term)

@@ -13,6 +13,8 @@
     "bootstrap-vue": "^2.0.0-rc.9",
     "vee-validate": "^2.0.9",
     "vue": "^2.5.16",
+    "vue-laravel-forms": "^1.0.10-beta",
+    "vue-laravel-validator": "^1.0.4",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },

@@ -15,7 +15,7 @@
               type="submit"
               variant="primary"
               @click="onSelected">
-              Select
+              Select / Deselect
             </b-button>
           </div>
       </div>
