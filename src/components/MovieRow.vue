@@ -3,7 +3,8 @@
     <div class="card" :class="{ 'bg-dark text-white': selected }">
       <img class="card-img-top" :src="movie.imageUrl" alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title"><i style="color: #086A87">Movie: </i>{{ movie.title}}</h5>
+        
+        <h5 class="card-title"><i style="color: #086A87">Movie: </i><router-link :to="{ name: 'movieId', params: {id: movie.id}}">{{ movie.title}}</router-link></h5>
         <h5 class="card-title"><i style="color: #086A87">Director: </i>{{ movie.director}}</h5>
         <h5 class="card-title"><i style="color: #086A87">Genre: </i>{{ movie.genre}}</h5>
         <h5 class="card-title"><i style="color: #086A87">Release Date: </i>{{ movie.releaseDate}}</h5>

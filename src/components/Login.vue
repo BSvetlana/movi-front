@@ -35,7 +35,7 @@ import { mapMutations } from 'vuex'
       ...mapMutations(["setIsAuthenticated"]),
       login() {
         authService.login(this.email,this.password)
-        .then((response) => {
+        .then(() => {
           this.$router.push({name: 'movies'});
           this.setIsAuthenticated(true);
         }).catch((error) => {

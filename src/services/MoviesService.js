@@ -9,14 +9,21 @@ const ENDPOINTS = {
 }
 
 export default {
-  store: function(movie) {
-    return axios.post(ENDPOINTS.MOVIES, movie)
-  },
-  index(term = '') {
-    return axios.get(ENDPOINTS.MOVIES, {
-      params: {
-        term
+
+    store: function (movie) {
+        return axios.post(ENDPOINTS.MOVIES, movie)
+      },
+      index(term = '') {
+        return axios.get(ENDPOINTS.MOVIES, {
+          params: {
+            term
+          }
+        })
+      },
+
+      getId(id) {
+        return axios.get(`movies/${id}`)
       }
-    })
-  }
+
+
 }

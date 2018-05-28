@@ -8,6 +8,7 @@ import AppMovies from '../components/AppMovies'
 import MovieForm from '../components/MovieForm'
 import Login from '../components/Login'
 import AppRegister from '../components/AppRegister'
+import Movie from '../components/Movie.vue'
 
 const routes = [{
         path: '/',
@@ -32,6 +33,11 @@ const routes = [{
         path: '/register',
         component: AppRegister,
         name: 'register'
+    },
+    {
+        path: '/movies/:id',
+        component: Movie,
+        name: 'movieId'
     }
 ]
 
