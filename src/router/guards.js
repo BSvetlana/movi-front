@@ -1,9 +1,11 @@
 import { authService } from './../services/Auth'
+// import { router } from './index'
 
 export function requiresAuth(to) {
     if (to.matched.some(record => record.meta.requiresAuth)) {
         if(!authService.isAuthenticated()) {
             return window.location.href = '/login' && '/register'
+            //router.push('/login')
         }
         authService.setAxiosDefaultAuthorizationHeader()
     }

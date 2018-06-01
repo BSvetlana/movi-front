@@ -17,7 +17,7 @@
       </router-link>
         
         <router-link class="nav-item nav-link active" to="/login" v-if="!isAuth">Login</router-link>
-        <a class="nav-item nav-link active" v-on:click="logout()" v-if="isAuth">Logout</a>
+        <a href="" class="nav-item nav-link active" v-on:click="logout()" v-if="isAuth">Logout</a>
 
       <movie-search
         @search-term-change="setSearchTerm"
